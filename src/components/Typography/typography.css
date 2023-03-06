@@ -1,0 +1,7 @@
+.typography {
+   box-sizing: border-box;
+   border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+   transition-delay: 0.5s;
+   transition: all 0.7s ease;
+   white-space: wrap;
+}

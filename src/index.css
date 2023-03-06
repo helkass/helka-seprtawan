@@ -1,0 +1,76 @@
+@import url("https://fonts.googleapis.com/css2?family=Mynerve&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Shantell+Sans&display=swap");
+body {
+   font-family: "Mynerve", cursive;
+   padding: 0;
+   margin: 0;
+   line-height: 1rem;
+   background: rgba(37, 119, 250, 0.02);
+}
+
+main {
+   margin: 1rem auto;
+   padding: 1.2rem 1rem;
+   width: 90%;
+}
+
+@media (max-width: 720px) {
+   main {
+      width: 100%;
+   }
+}
+
+.content::before {
+   content: "";
+   z-index: -1;
+   position: absolute;
+   width: 100%;
+   height: calc(100% + 10px);
+   border: 0.6rem solid #3e54ac;
+   top: -1%;
+   left: 1%;
+}
+
+.container {
+   max-width: 900px;
+   width: calc(100% - 30px);
+   margin: 0 auto;
+}
+
+a {
+   color: inherit;
+   width: max-content;
+   text-decoration: none;
+   cursor: pointer;
+}
+
+button {
+   background-color: inherit;
+   color: inherit;
+   display: block;
+   border: none;
+}
+
+input,
+textarea {
+   border: none;
+   outline: none;
+}
+
+button,
+textarea,
+input:focus-visible {
+   border: 2px dashed gray;
+}
+
+li {
+   list-style: none;
+}
+
+/* hover */
+
+.hover-link:hover {
+   transform: translateY(-3px);
+   transition: all 0.5 ease;
+   color: #3a98b9;
+}

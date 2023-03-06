@@ -1,0 +1,70 @@
+.layout__section {
+   display: flex;
+   line-height: 1.5;
+   position: relative;
+   background: white;
+   margin: 50px 0;
+}
+
+.layout__section::before {
+   content: "";
+   z-index: -1;
+   position: absolute;
+   width: 100%;
+   height: calc(100% + 10px);
+   border: 0.6rem solid #3e54ac;
+   top: -1%;
+   left: 1%;
+}
+
+@media (max-width: 599px) {
+   .hero__section {
+      flex-direction: column;
+      gap: 1.5rem;
+   }
+}
+
+.card {
+   display: flex;
+   background-color: #3e54ac;
+   position: relative;
+   justify-content: end;
+   padding-right: 15px;
+   padding-left: 15px;
+   flex-direction: row;
+   gap: 10px;
+   align-items: center;
+   height: 60px;
+   min-width: 150px;
+   box-sizing: border-box;
+}
+
+.card span,
+.icon {
+   z-index: 2;
+   font-weight: 600;
+}
+
+.card::before {
+   content: "";
+   width: 98%;
+   height: calc(100% + 10px);
+   background: white;
+   display: block;
+   position: absolute;
+   top: 1px;
+   left: 1px;
+}
+
+.card,
+.card::before {
+   clip-path: polygon(25% 0%, 100% 1%, 100% 100%, 25% 100%, 0% 50%);
+   -webkit-clip-path: polygon(25% 0%, 100% 1%, 100% 100%, 25% 100%, 0% 50%);
+}
+
+.card .card__image__Icon {
+   width: 25px;
+   height: 25px;
+   object-fit: cover;
+   z-index: 2;
+}

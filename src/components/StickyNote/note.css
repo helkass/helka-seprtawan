@@ -1,0 +1,39 @@
+.note__content {
+   display: flex;
+   flex-direction: column;
+   gap: 15px;
+   position: relative;
+   justify-content: space-between;
+   padding: 10px;
+   background: rgba(0, 255, 255, 0.2);
+   min-width: 200px;
+   max-width: 360px;
+   min-height: 160px;
+   box-sizing: inherit;
+
+   -webkit-box-shadow: 10px 10px 5px -3px rgba(0, 0, 0, 0.11);
+   -moz-box-shadow: 10px 10px 5px -3px rgba(0, 0, 0, 0.11);
+   box-shadow: 10px 10px 5px -3px rgba(0, 0, 0, 0.11);
+}
+
+.note__title {
+   width: 100%;
+   display: block;
+   text-align: center;
+}
+
+.note__content .note__image {
+   max-width: 170px;
+   height: 110px;
+   object-fit: contain;
+   margin: auto;
+}
+
+.note__content .note__social__icons {
+   display: flex;
+   gap: 15px;
+}
+
+.note__content .note__social__icons .note__social__icon {
+   cursor: pointer;
+}

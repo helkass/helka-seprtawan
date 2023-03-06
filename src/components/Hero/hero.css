@@ -1,0 +1,104 @@
+.hero__section {
+   display: flex;
+   justify-content: space-around;
+   line-height: 1.5;
+   position: relative;
+   background: white;
+}
+
+.hero__left,
+.hero__right {
+   min-width: 30%;
+   position: relative;
+   padding: 0 0.6rem;
+}
+.hero__left {
+   display: flex;
+   flex-direction: column;
+   justify-content: space-around;
+}
+
+.hero__left .hero__title {
+   font-size: 2rem;
+   align-items: center;
+}
+
+.hero__left .hero__subtitle {
+   font-size: 1.5rem;
+   display: flex;
+   white-space: wrap;
+}
+
+.hero__left .hero__title .header__icon__react {
+   display: block;
+   align-items: center;
+   max-height: max-content;
+   width: max-content;
+   animation: spinner 2.6s linear infinite;
+}
+
+@keyframes spinner {
+   0% {
+      transform: rotate(0deg);
+   }
+   100% {
+      transform: rotate(360deg);
+   }
+}
+
+.header__icons {
+   display: flex;
+   gap: 10px;
+   flex-wrap: nowrap;
+}
+
+.hero__right .hero__image {
+   max-width: 280px;
+   object-fit: cover;
+}
+
+@media (max-width: 820px) {
+   .hero__left {
+      width: 60%;
+   }
+   .hero__right {
+      display: flex;
+      justify-content: end;
+      align-items: flex-end;
+   }
+
+   .hero__right .hero__image {
+      height: 80%;
+      align-self: end;
+   }
+
+   .hero__title {
+      font-size: 1.7rem;
+      white-space: nowrap;
+   }
+
+   .hero__subtitle {
+      font-size: 1.2rem;
+   }
+}
+
+@media (max-width: 599px) {
+   .hero__section {
+      flex-direction: column;
+      gap: 1.5rem;
+   }
+
+   .hero__left,
+   .hero__right {
+      width: 95%;
+   }
+
+   .hero__title {
+      white-space: normal;
+   }
+
+   .hero__right {
+      align-items: center;
+      justify-content: center;
+   }
+}
