@@ -2,15 +2,10 @@ import React from "react";
 import "./hero.css";
 import man from "../../assets/man.png";
 import Typography from "../Typography";
-import IconButton from "../IconButton";
 import Layout from "../Layout";
+import Button from "../Buttons";
 
-import {
-   AiFillInstagram,
-   AiFillGithub,
-   AiFillLinkedin,
-   AiFillTwitterSquare,
-} from "react-icons/ai";
+import { AiFillInstagram, AiFillGithub, AiFillLinkedin } from "react-icons/ai";
 
 const Index = () => {
    return (
@@ -26,18 +21,15 @@ const Index = () => {
                </Typography>
             </div>
             <div className="header__icons">
-               <IconButton>
+               <Button href="https://www.instagram.com/helka_septyawan/?hl=id">
                   <AiFillInstagram />
-               </IconButton>
-               <IconButton>
+               </Button>
+               <Button href="https://github.com/helkass/">
                   <AiFillGithub />
-               </IconButton>
-               <IconButton>
+               </Button>
+               <Button href="https://www.linkedin.com/in/helka-septyawan-66a60415b/">
                   <AiFillLinkedin />
-               </IconButton>
-               <IconButton>
-                  <AiFillTwitterSquare />
-               </IconButton>
+               </Button>
             </div>
          </div>
          <div className="hero__right">

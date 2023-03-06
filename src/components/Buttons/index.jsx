@@ -7,10 +7,11 @@ const Button = ({ children, onClick, className, to, border, href, type }) => {
       return (
          <a href={href} target="_blank">
             <button
-               className={`button__style ${className} `}
+               className={`button__style hover-link ${className} `}
                style={{
                   border: border && `4px solid ${color.secondary}`,
                   color: color.primary,
+                  cursor: "pointer",
                }}>
                {children}
             </button>
