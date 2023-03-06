@@ -26,15 +26,6 @@ const Contact = () => {
       type: false,
       message: "",
    });
-   const [cb, setCb] = useState({
-      type: false,
-      message: "",
-   });
-
-   const coba = () => {
-      setCb({ type: true, message: "test" });
-   };
-   console.log(cb);
 
    const handleSubmit = (e) => {
       e.preventDefault();
@@ -106,7 +97,6 @@ const Contact = () => {
                   </span>
                </Button>
             </form>
-            <button onClick={coba}>coba</button>
          </div>
       </Layout>
    );
