@@ -1,12 +1,24 @@
 import React from "react";
 import "./projects.css";
-import { projects } from "../../data/projects";
 
 import Layout from "../Layout";
 import Button from "../Buttons";
 import StickyNote from "../StickyNote";
 
+import { api } from "../../constants/app";
+
 const Index = ({ pages }) => {
+   const [data, setData] = React.useState([]);
+   const fetchData = async () => {
+      const response = await fetch(`${api}/projects`);
+      const json = await response.json();
+
+      setData(json);
+   };
+
+   React.useEffect(() => {
+      fetchData();
+   }, []);
    return (
       <Layout pages={pages}>
          <div className="project__content">
@@ -14,7 +26,7 @@ const Index = ({ pages }) => {
             <div className="project__content__note">
                {/* pages render all data */}
                {pages
-                  ? projects.map((project, idx) => (
+                  ? data.map((project, idx) => (
                        <StickyNote
                           key={idx}
                           title={project.title}
@@ -24,7 +36,7 @@ const Index = ({ pages }) => {
                           rotateLeft={idx % 2 === 0}
                        />
                     ))
-                  : projects
+                  : data
                        .slice(0, 3)
                        .map((project, idx) => (
                           <StickyNote

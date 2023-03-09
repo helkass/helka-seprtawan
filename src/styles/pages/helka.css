@@ -1,0 +1,44 @@
+.admin__container {
+   display: flex;
+   gap: 1.4rem;
+}
+
+.admin__content {
+   width: 50%;
+   display: flex;
+   gap: 20px;
+   flex-wrap: wrap;
+   padding: 2rem;
+   justify-content: center;
+}
+
+.form__content {
+   display: flex;
+   flex-direction: column;
+   gap: 20px;
+   width: 100%;
+   align-items: center;
+}
+
+.form__content input {
+   padding: 8px 12px;
+   min-width: 300px;
+}
+
+.form__content button {
+   padding: 7px 12px;
+   width: max-content;
+   align-items: center;
+   align-self: center;
+}
+
+.admin__content img {
+   max-width: 200px;
+   object-fit: contain;
+}
+
+@media (max-width: 599px) {
+   .admin__container {
+      flex-direction: column;
+   }
+}

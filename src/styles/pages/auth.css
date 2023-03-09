@@ -1,0 +1,35 @@
+.form__login {
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+   row-gap: 2rem;
+   align-items: center;
+   font-size: 1.1rem;
+   margin: 2rem 0;
+}
+
+.login__input {
+   display: flex;
+   flex-direction: column;
+   gap: 20px;
+   width: 70%;
+}
+
+.login__input input {
+   padding: 7px 12px;
+}
+
+.form__login > button {
+   padding: 6px 12px;
+   cursor: pointer;
+}
+
+.form__login > button:hover {
+   background: aqua;
+}
+
+@media (max-width: 599px) {
+   .login__input {
+      width: 90%;
+   }
+}
